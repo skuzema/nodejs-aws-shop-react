@@ -13,6 +13,6 @@ class MyStaticSiteStack extends cdk.Stack {
 
 const app = new cdk.App();
 
-new MyStaticSiteStack(app, "MyJSCCStaticWebsite");
+new MyStaticSiteStack(app, "SKJSCCStaticWebsite");
 
 app.synth();

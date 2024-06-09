@@ -8,7 +8,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-OAI/Resource"
+    "aws:cdk:path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-OAI/Resource"
    }
   },
   "JSCCStaticWebsiteJSCCStaticBucket81DADFF5": {
@@ -23,7 +23,7 @@
     },
     "Tags": [
      {
-      "Key": "aws-cdk:cr-owned:1149a121",
+      "Key": "aws-cdk:cr-owned:a9ab4f1b",
       "Value": "true"
      }
     ],
@@ -34,7 +34,7 @@
    "UpdateReplacePolicy": "Retain",
    "DeletionPolicy": "Retain",
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Resource"
+    "aws:cdk:path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Resource"
    }
   },
   "JSCCStaticWebsiteJSCCStaticBucketPolicy2E2CDB45": {
@@ -123,7 +123,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Policy/Resource"
+    "aws:cdk:path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Policy/Resource"
    }
   },
   "JSCCStaticWebsiteJSCCdistributionCFDistribution893FD123": {
@@ -186,7 +186,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-distribution/CFDistribution"
+    "aws:cdk:path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-distribution/CFDistribution"
    }
   },
   "JSCCStaticWebsiteJSCCBucketDeploymentAwsCliLayerC935F6C8": {
@@ -201,7 +201,7 @@
     "Description": "/opt/awscli/aws"
    },
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Resource",
+    "aws:cdk:path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Resource",
     "aws:asset:path": "asset.3322b7049fb0ed2b7cbb644a2ada8d1116ff80c32dca89e6ada846b5de26f961.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Content"
@@ -222,7 +222,7 @@
      }
     ],
     "SourceObjectKeys": [
-     "6dc3de985258893cae4bbe25b3e933f846c25f03c610097d15ee2cf2d4376737.zip"
+     "9f62ef38fd33fc65bea4a8be497301529c0e1155095e0f73956e00e62354c705.zip"
     ],
     "DestinationBucketName": {
      "Ref": "JSCCStaticWebsiteJSCCStaticBucket81DADFF5"
@@ -238,7 +238,7 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/CustomResource/Default"
+    "aws:cdk:path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/CustomResource/Default"
    }
   },
   "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265": {
@@ -272,7 +272,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource"
+    "aws:cdk:path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource"
    }
   },
   "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF": {
@@ -377,7 +377,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource"
    }
   },
   "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536": {
@@ -414,7 +414,7 @@
     "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
    ],
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
+    "aws:cdk:path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
     "aws:asset:path": "asset.2d56e153cac88d3e0c2f842e8e6f6783b8725bf91f95e0673b4725448a56e96d",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
@@ -426,7 +426,7 @@
     "Analytics": "v2:deflate64:H4sIAAAAAAAA/21Oy2rDMBD8ltwVNU7bD0gUAoVCSwLt0cjS2mwsS8Ur1Rjhfy+yEieHnuaxs7uz5cXLK9+s5EBrpdu1wYrHs5eqZXKgMirjgq57Zz2PHz02aHdKAdGbBuvRj0zUVqTMMWX+Tyzjb6gOSL7HKnh0Nu0+6onRM4/7oFrwaXZlGT6dQTXe7avOYi8J0nYZNfwYN3ZgPc+jw2IwSQSe+C7BxIzsKi15FLV9lyP0X9BTKnVG2xjwzh6DVXPNhYh6MSeGsuPx5Awke8Z7xcym25PSpAelHEgZ5LuBhMH5J5u7nL1s0DZMBPKuOwG50Kt89sYfTeGsxtzBOg38Qk+/2w0vCl6sLoS47oP12AE/ZfwDZJw8HeMBAAA="
    },
    "Metadata": {
-    "aws:cdk:path": "MyJSCCStaticWebsite/CDKMetadata/Default"
+    "aws:cdk:path": "SKJSCCStaticWebsite/CDKMetadata/Default"
    },
    "Condition": "CDKMetadataAvailable"
   }

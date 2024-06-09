@@ -4,21 +4,21 @@
     "id": "App",
     "path": "",
     "children": {
-      "MyJSCCStaticWebsite": {
-        "id": "MyJSCCStaticWebsite",
-        "path": "MyJSCCStaticWebsite",
+      "SKJSCCStaticWebsite": {
+        "id": "SKJSCCStaticWebsite",
+        "path": "SKJSCCStaticWebsite",
         "children": {
           "JSCCStaticWebsite": {
             "id": "JSCCStaticWebsite",
-            "path": "MyJSCCStaticWebsite/JSCCStaticWebsite",
+            "path": "SKJSCCStaticWebsite/JSCCStaticWebsite",
             "children": {
               "JSCC-OAI": {
                 "id": "JSCC-OAI",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-OAI",
+                "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-OAI",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-OAI/Resource",
+                    "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-OAI/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
                       "aws:cdk:cloudformation:props": {
@@ -40,11 +40,11 @@
               },
               "JSCCStaticBucket": {
                 "id": "JSCCStaticBucket",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket",
+                "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Resource",
+                    "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                       "aws:cdk:cloudformation:props": {
@@ -57,7 +57,7 @@
                         },
                         "tags": [
                           {
-                            "key": "aws-cdk:cr-owned:1149a121",
+                            "key": "aws-cdk:cr-owned:a9ab4f1b",
                             "value": "true"
                           }
                         ],
@@ -73,11 +73,11 @@
                   },
                   "Policy": {
                     "id": "Policy",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Policy",
+                    "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Policy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Policy/Resource",
+                        "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCCStaticBucket/Policy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
                           "aws:cdk:cloudformation:props": {
@@ -183,11 +183,11 @@
               },
               "JSCC-distribution": {
                 "id": "JSCC-distribution",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-distribution",
+                "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-distribution",
                 "children": {
                   "CFDistribution": {
                     "id": "CFDistribution",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-distribution/CFDistribution",
+                    "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-distribution/CFDistribution",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
                       "aws:cdk:cloudformation:props": {
@@ -261,19 +261,19 @@
               },
               "JSCC-Bucket-Deployment": {
                 "id": "JSCC-Bucket-Deployment",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment",
+                "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment",
                 "children": {
                   "AwsCliLayer": {
                     "id": "AwsCliLayer",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer",
+                    "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer",
                     "children": {
                       "Code": {
                         "id": "Code",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Code",
+                        "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Code",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Code/Stage",
+                            "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Code/Stage",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.AssetStaging",
                               "version": "2.145.0"
@@ -281,7 +281,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Code/AssetBucket",
+                            "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Code/AssetBucket",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                               "version": "2.145.0"
@@ -295,7 +295,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Resource",
+                        "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/AwsCliLayer/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::LayerVersion",
                           "aws:cdk:cloudformation:props": {
@@ -321,7 +321,7 @@
                   },
                   "CustomResourceHandler": {
                     "id": "CustomResourceHandler",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/CustomResourceHandler",
+                    "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/CustomResourceHandler",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
                       "version": "2.145.0"
@@ -329,11 +329,11 @@
                   },
                   "Asset1": {
                     "id": "Asset1",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/Asset1",
+                    "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/Asset1",
                     "children": {
                       "Stage": {
                         "id": "Stage",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/Asset1/Stage",
+                        "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/Asset1/Stage",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.AssetStaging",
                           "version": "2.145.0"
@@ -341,7 +341,7 @@
                       },
                       "AssetBucket": {
                         "id": "AssetBucket",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/Asset1/AssetBucket",
+                        "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/Asset1/AssetBucket",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                           "version": "2.145.0"
@@ -355,11 +355,11 @@
                   },
                   "CustomResource": {
                     "id": "CustomResource",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/CustomResource",
+                    "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/CustomResource",
                     "children": {
                       "Default": {
                         "id": "Default",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/CustomResource/Default",
+                        "path": "SKJSCCStaticWebsite/JSCCStaticWebsite/JSCC-Bucket-Deployment/CustomResource/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
                           "version": "2.145.0"
@@ -385,15 +385,15 @@
           },
           "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C": {
             "id": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
-            "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
+            "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
             "children": {
               "ServiceRole": {
                 "id": "ServiceRole",
-                "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole",
+                "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole",
                 "children": {
                   "ImportServiceRole": {
                     "id": "ImportServiceRole",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/ImportServiceRole",
+                    "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.145.0"
@@ -401,7 +401,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource",
+                    "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -440,11 +440,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy",
+                    "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource",
+                        "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -566,11 +566,11 @@
               },
               "Code": {
                 "id": "Code",
-                "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code",
+                "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code",
                 "children": {
                   "Stage": {
                     "id": "Stage",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/Stage",
+                    "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
                       "version": "2.145.0"
@@ -578,7 +578,7 @@
                   },
                   "AssetBucket": {
                     "id": "AssetBucket",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket",
+                    "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                       "version": "2.145.0"
@@ -592,7 +592,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
+                "path": "SKJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
@@ -636,11 +636,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "MyJSCCStaticWebsite/CDKMetadata",
+            "path": "SKJSCCStaticWebsite/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "MyJSCCStaticWebsite/CDKMetadata/Default",
+                "path": "SKJSCCStaticWebsite/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.145.0"
@@ -648,7 +648,7 @@
               },
               "Condition": {
                 "id": "Condition",
-                "path": "MyJSCCStaticWebsite/CDKMetadata/Condition",
+                "path": "SKJSCCStaticWebsite/CDKMetadata/Condition",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnCondition",
                   "version": "2.145.0"
@@ -662,7 +662,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "MyJSCCStaticWebsite/BootstrapVersion",
+            "path": "SKJSCCStaticWebsite/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.145.0"
@@ -670,7 +670,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "MyJSCCStaticWebsite/CheckBootstrapVersion",
+            "path": "SKJSCCStaticWebsite/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.145.0"
