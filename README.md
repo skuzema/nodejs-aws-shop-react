@@ -24,4 +24,8 @@ Configure AWS CDK
 
 ### 5. cdk bootstrap aws://<your AWS account ID>/<default region> --profile <your-profile-name>
 
+Bootstrap AWS application
+
 ### 6. cdk deploy --profile default --require-approval=never
+
+Deploy AWS application
