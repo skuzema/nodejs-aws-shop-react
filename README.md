@@ -1,1 +1,1 @@
-# Branch task-2: Task 2 (Serve SPA in AWS S3 and Cloudfront Services)
+## task-2: Task 2 (Serve SPA in AWS S3 and Cloudfront Services)
