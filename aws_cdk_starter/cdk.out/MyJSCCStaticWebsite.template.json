@@ -16,10 +16,10 @@
    "Properties": {
     "BucketName": "sk-nodejs-aws-shop-react",
     "PublicAccessBlockConfiguration": {
-     "BlockPublicAcls": true,
-     "BlockPublicPolicy": true,
-     "IgnorePublicAcls": true,
-     "RestrictPublicBuckets": true
+     "BlockPublicAcls": false,
+     "BlockPublicPolicy": false,
+     "IgnorePublicAcls": false,
+     "RestrictPublicBuckets": false
     },
     "Tags": [
      {
@@ -45,6 +45,27 @@
     },
     "PolicyDocument": {
      "Statement": [
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "*"
+       },
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "JSCCStaticWebsiteJSCCStaticBucket81DADFF5",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      },
       {
        "Action": "S3:GetObject",
        "Effect": "Allow",

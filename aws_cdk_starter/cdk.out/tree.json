@@ -50,10 +50,10 @@
                       "aws:cdk:cloudformation:props": {
                         "bucketName": "sk-nodejs-aws-shop-react",
                         "publicAccessBlockConfiguration": {
-                          "blockPublicAcls": true,
-                          "blockPublicPolicy": true,
-                          "ignorePublicAcls": true,
-                          "restrictPublicBuckets": true
+                          "blockPublicAcls": false,
+                          "blockPublicPolicy": false,
+                          "ignorePublicAcls": false,
+                          "restrictPublicBuckets": false
                         },
                         "tags": [
                           {
@@ -86,6 +86,27 @@
                             },
                             "policyDocument": {
                               "Statement": [
+                                {
+                                  "Action": "s3:GetObject",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "AWS": "*"
+                                  },
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "JSCCStaticWebsiteJSCCStaticBucket81DADFF5",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/*"
+                                      ]
+                                    ]
+                                  }
+                                },
                                 {
                                   "Action": "S3:GetObject",
                                   "Effect": "Allow",

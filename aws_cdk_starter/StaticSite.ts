@@ -18,8 +18,15 @@ export class StaticSite extends Construct {
     const siteBucket = new s3.Bucket(this, "JSCCStaticBucket", {
       bucketName: "sk-nodejs-aws-shop-react",
       websiteIndexDocument: "index.html",
-      publicReadAccess: false,
-      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      publicReadAccess: true,
+      blockPublicAccess: new s3.BlockPublicAccess({
+        blockPublicAcls: false,
+        ignorePublicAcls: false,
+        blockPublicPolicy: false,
+        restrictPublicBuckets: false,
+      }),
+      // blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      // accessControl: s3.BucketAccessControl.PRIVATE,
     });
 
     siteBucket.addToResourcePolicy(
