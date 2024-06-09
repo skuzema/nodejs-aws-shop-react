@@ -16,6 +16,12 @@ Build SPA application
 
 ### 2. cd aws_cdk_starter
 
-### 3. npm run build
+### 3. Install AWS CDK for your OS
 
-### 4. npm run cdk
+### 4. aws configure
+
+Configure AWS CDK
+
+### 5. cdk bootstrap aws://<your AWS account ID>/<default region> --profile <your-profile-name>
+
+### 6. cdk deploy --profile default --require-approval=never
