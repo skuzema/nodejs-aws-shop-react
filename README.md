@@ -22,7 +22,7 @@ Build SPA application
 
 Configure AWS CDK
 
-### 5. cdk bootstrap aws://<your AWS account ID>/<default region> --profile <your-profile-name>
+### 5. cdk bootstrap aws://"your AWS account ID"/"default region" --profile "your-profile-name"
 
 Bootstrap AWS application
 
