@@ -222,7 +222,7 @@
      }
     ],
     "SourceObjectKeys": [
-     "3a7c6827dcfacbda5c0a9cf45b17c6637f014b0f7f1dcc412df4a1eed6423363.zip"
+     "506b839ee45a742e7954e8e96c7728e42bdfd15d334d4edb60cd3f9528d18e95.zip"
     ],
     "DestinationBucketName": {
      "Ref": "JSCCStaticWebsiteJSCCStaticBucket81DADFF5"
