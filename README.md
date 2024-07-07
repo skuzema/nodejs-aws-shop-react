@@ -1,29 +1,20 @@
-# Task 5 (Integration with S3)
+# Task 6 (SQS & SNS, Async Microservices Communication)
 
-1. Task: [aws-developer/05_integration_with_s3/task.md](https://github.com/rolling-scopes-school/aws/blob/main/aws-developer/05_integration_with_s3/task.md)
+1. Task: [Task 7 (Authorization)](https://github.com/rolling-scopes-school/aws/blob/main/aws-developer/07_authorization/task.md)
 2. Screenshot:
-   ![image](https://github.com/skuzema/aws-backend/assets/70452303/1337d573-09c2-4a22-92f7-f6816dcff808)
-   ![image](https://github.com/skuzema/aws-backend/assets/70452303/3c463786-678c-4c1c-bca1-c6ddffbef4be)
-   ![image](https://github.com/skuzema/aws-backend/assets/70452303/c1faa711-01d1-40d1-b045-973b703dfb1a)
 3. Deploy:
-   **FrontEnd:**
-   **https://dygwcz719ldx7.cloudfront.net/**
-   FrontEnd PR:
-   https://github.com/skuzema/nodejs-aws-shop-react/pull/3
-   **API importProductsFile (Get signedURL):**
-   **GET https://xh6s7nt1ga.execute-api.eu-north-1.amazonaws.com/prod/import?name=test.csv**
-4. Done 30.06.2024 / deadline 01.07.2024
+   **FrontEnd: https://dygwcz719ldx7.cloudfront.net/**
+   **FrontEnd PR: https://github.com/skuzema/nodejs-aws-shop-react/pull/3**
+4. Done 14.07.2024 / deadline 15.07.2024
 5. Score: 100 / 100
 
 - [x] Evaluation criteria (70 points for covering all criteria)
-  - [x] AWS CDK Stack contains configuration for importProductsFile function
-  - [x] The importProductsFile lambda function returns a correct response which can be used to upload a file into the S3 bucket
-  - [x] Frontend application is integrated with importProductsFile lambda: https://dygwcz719ldx7.cloudfront.net/
-  - [x] The importFileParser lambda function is implemented and AWS CDK Stack contains configuration for the lambda
+      Provide your reviewers with the link to the repo, client application and URLs to execute the /import path of the Import Service`
+  - [x] authorization-service is added to the repo, has correct basicAuthorizer lambda and correct AWS CDK Stack
+  - [x] Import Service AWS CDK Stack has authorizer configuration for the importProductsFile lambda. Request to the importProductsFile lambda should work only with correct authorization_token being decoded and checked by basicAuthorizer lambda. Response should be in 403 HTTP status if access is denied for this user (invalid authorization_token) and in 401 HTTP status if Authorization header is not provided.
+  - [x] Client application is updated to send "Authorization: Basic authorization_token" header on import. Client should get authorization_token value from browser localStorage
 - [x] Additional (optional) tasks (30 points)
-  - [x] _+10 (All languages)_ - importProductsFile lambda is covered by unit tests. You should consider to mock S3 and other AWS SDK methods so not trigger actual AWS services while unit testing.
-  - [x] _+10 (All languages)_ - importFileParser lambda is covered by unit tests.
-  - [x] _+10 (All languages)_ - At the end of the stream the lambda function should move the file from the uploaded folder into the parsed folder (move the file means that file should be copied into a new folder in the same bucket called parsed, and then deleted from uploaded folder)
+  - [x] _+30 (All languages)_ - Client application should display alerts for the responses in 401 and 403 HTTP statuses. This behavior should be added to the nodejs-aws-fe-main/src/index.tsx file.
 
 ## How to start
 
