@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Alert from "@mui/material/Alert";
-import Snackbar from "@mui/material/Snackbar";
+import { useAlert } from "~/components/AlertContext/AlertContext";
 import axios from "axios";
 
 type CSVFileImportProps = {
@@ -12,11 +12,7 @@ type CSVFileImportProps = {
 
 export default function CSVFileImport({ url, title }: CSVFileImportProps) {
   const [file, setFile] = React.useState<File | undefined>(undefined);
-  const [alert, setAlert] = React.useState<{
-    severity: "error" | "success";
-    message: string;
-  } | null>(null);
-  const [open, setOpen] = React.useState(false);
+  const { showAlert } = useAlert();
 
   const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -32,24 +28,18 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
 
   const uploadFile = async () => {
     if (!file) {
-      setAlert({ severity: "error", message: "No file selected" });
-      setOpen(true);
+      showAlert({ severity: "error", message: "No file selected" });
       return;
     }
 
     console.log("uploadFile to", url);
 
-    // Get the authorization token from localStorage
     const authorization_token = localStorage.getItem("authorization_token");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const headers: any = {};
-    console.log("authorization_token:", authorization_token);
     if (authorization_token) {
       headers.Authorization = `Basic ${authorization_token}`;
     }
-    console.log("headers.Authorization:", headers.Authorization);
     try {
-      // Get the presigned URL with authorization header
       const response = await axios({
         method: "GET",
         url,
@@ -59,8 +49,6 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
         headers,
       });
 
-      console.log("File to upload: ", file.name);
-      console.log("Uploading to: ", response.data.url);
       const result = await fetch(response.data.url, {
         method: "PUT",
         body: file,
@@ -70,61 +58,44 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       });
       console.log("Result: ", result);
       setFile(undefined);
-      setAlert({ severity: "success", message: "File uploaded successfully!" });
-      setOpen(true);
+      showAlert({
+        severity: "success",
+        message: "File uploaded successfully!",
+      });
     } catch (error) {
       if (axios.isAxiosError(error)) {
         if (error.response?.status === 401) {
-          setAlert({
+          showAlert({
             severity: "error",
             message:
               "Error 401: Unauthorized! Please setup 'authorization_token' in browser localStorage.",
           });
         } else if (error.response?.status === 403) {
-          setAlert({
+          showAlert({
             severity: "error",
             message:
               "Error 403: Forbidden! Access is denied for this user (invalid authorization_token).",
           });
         } else {
-          setAlert({
+          showAlert({
             severity: "error",
             message: "Error uploading file: " + error.message,
           });
         }
       } else {
-        setAlert({
+        showAlert({
           severity: "error",
           message: "Error uploading file!",
         });
       }
-      setOpen(true);
     }
   };
-
-  React.useEffect(() => {
-    if (open) {
-      const timer = setTimeout(() => {
-        setOpen(false);
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [open]);
 
   return (
     <Box>
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
-      {alert && (
-        <Snackbar
-          anchorOrigin={{ vertical: "top", horizontal: "right" }}
-          open={open}
-          onClose={() => setOpen(false)}
-        >
-          <Alert severity={alert.severity}>{alert.message}</Alert>
-        </Snackbar>
-      )}
       {!file ? (
         <input type="file" onChange={onFileChange} />
       ) : (
